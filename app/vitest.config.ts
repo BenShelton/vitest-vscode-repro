@@ -1,8 +1,8 @@
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
-import { defineProject } from 'vitest/config'
+import { defineConfig } from 'vitest/config'
 
-export default defineProject({
+export default defineConfig({
   plugins: [
     vue(),
   ],
@@ -34,5 +34,23 @@ export default defineProject({
     include: [
       '**/__tests__/**/*.spec.ts',
     ],
+    poolOptions: {
+      threads: {
+        useAtomics: true,
+      },
+    },
+    coverage: {
+      all: true,
+      reporter: [
+        'text',
+        'text-summary',
+        'html',
+      ],
+      provider: 'istanbul',
+      reportsDirectory: 'coverage',
+      include: [
+        'src/**/*.{ts,vue}'
+      ]
+    },
   },
 })

@@ -11,8 +11,6 @@
     ]
   },
   "include": [
-    "vitest.config.ts",
-    "vitest.workspace.ts",
     "app/vite.config.ts",
     "app/vitest.config.ts"
   ]
