@@ -1,0 +1,7 @@
+{
+  "vue.server.hybridMode": true,
+  "vitest.workspaceConfig": "vitest.workspace.ts",
+  "testing.coverageToolbarEnabled": true,
+  "testing.showCoverageInExplorer": true,
+  "testing.automaticallyOpenPeekView": "never"
+}
